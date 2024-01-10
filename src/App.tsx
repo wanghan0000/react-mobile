@@ -4,7 +4,6 @@ import { Navigate, Route, Routes } from 'react-router';
 import LazyCompoment from './compoments/lazyCompoment/LazyCompoment';
 import './App.less'
 function App() {
-  console.log(AutomaticGeneratedRoutes)
   return (
     <div className="App">
       <Routes>

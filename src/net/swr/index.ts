@@ -23,7 +23,7 @@ class SWRKeyManager {
   }
 
   public static init() {
-    if(SWRKeyManager.instance) {
+    if(!SWRKeyManager.instance) {
         SWRKeyManager.instance = new SWRKeyManager()
     }
   }
@@ -49,6 +49,4 @@ export default SWRKey
  *      }
  *      return useSWR(SKRKey.keyPrefix + JSON.stringly(params),fetch,{})
  * }
- * 
- * 
  */
