@@ -3,7 +3,6 @@ import { Button } from '@arco-design/mobile-react';
 import { useNavigate } from "react-router";
 
 //
-//
 const Home = ()=>{
     const navigate = useNavigate()
     const handleOnclick=()=>{
