@@ -48,12 +48,14 @@ pageContext.keys().forEach((pagePath) => {
         };
         AutomaticGeneratedRoutes.push(parentRoute);
       }
+      if(childRoute?.path === parentRoute?.path && childRoute?.defaultRoute) {
+         parentRoute.defaultRoute = childRoute.defaultRoute;
+      }
 
       if (childRoute.path !== parentRoute.path) {
         // 添加子路由到父路由的 children 数组
         parentRoute.children.push(childRoute);
       }
-
     } else {
       // 父路由
       const route = buildRouteObject(pagePath, pageConfig);
