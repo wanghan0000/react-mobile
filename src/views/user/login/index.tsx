@@ -2,16 +2,17 @@ import React from "react";
 import { Button } from '@arco-design/mobile-react';
 import { useNavigate } from "react-router";
 
-const Home = ()=>{
+const Login = ()=>{
     const navigate = useNavigate()
     const handleOnclick=()=>{
-        navigate('/user')
+        navigate('/main/home')
     }
-    return (<div>Home
+    return (<div>
+login页面
         <Button needActive onClick={handleOnclick}>
-            跳转Login
+            跳转Home
         </Button>
     </div>)
 }
 
-export default Home
+export default Login
