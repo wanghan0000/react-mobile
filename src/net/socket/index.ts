@@ -1,0 +1,7 @@
+/**
+ * socket
+ */
+
+export class SocketManager {
+    
+}

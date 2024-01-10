@@ -7,6 +7,7 @@ import App from './App';
 import reportWebVitals from './reportWebVitals';
 import { Metric } from 'web-vitals';
 import { BrowserRouter } from 'react-router-dom';
+import { SWRConfig } from 'swr';
 
 /**
  * @param baseFontSize 1rem基准fontSize，默认 50
@@ -16,19 +17,29 @@ import { BrowserRouter } from 'react-router-dom';
  */
 setRootPixel(37.5);
 
-const root = ReactDOM.createRoot(
-  document.getElementById('root') as HTMLElement
-);
+const root = ReactDOM.createRoot(document.getElementById('root') as HTMLElement);
 root.render(
   <BrowserRouter>
-   <App />
+    <SWRConfig
+      value={{
+        //数据缓存有效期 默认不缓存
+        dedupingInterval: 0,
+        //错误后自动请求间隔
+        errorRetryInterval: 3000,
+        //错误后自动重试次数
+        errorRetryCount: 3,
+        //页面重新激活后是否重新请求
+        revalidateOnFocus: false,
+      }}
+    >
+      <App />
+    </SWRConfig>
   </BrowserRouter>
-   
 );
 
 // If you want to start measuring performance in your app, pass a function
 // to log results (for example: reportWebVitals(console.log))
 // or send to an analytics endpoint. Learn more: https://bit.ly/CRA-vitals
-reportWebVitals((metric: Metric)=>{
-  console.log(metric)
+reportWebVitals((metric: Metric) => {
+  console.log(metric);
 });
