@@ -1,16 +1,16 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import AutomaticGeneratedRoutes from './router/index'
 import { Navigate, Route, Routes, useNavigate } from 'react-router';
 import LazyCompoment from './compoments/lazyCompoment/LazyCompoment';
-import './App.css'
-
+import './App.less'
+import Button from '@arco-design/mobile-react/esm/button';
 function App() {
 
   const navigate = useNavigate();
 
   return (
     <div className="App">
-
+      <Button>hhhhhh</Button>
       <div className='title'>
         {
           AutomaticGeneratedRoutes.map((v:any, index:number) => {
