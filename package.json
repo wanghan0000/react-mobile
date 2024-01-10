@@ -9,7 +9,6 @@
     "@testing-library/user-event": "^13.5.0",
     "@types/jest": "^27.5.2",
     "@types/node": "^16.18.70",
-    "@types/react": "^18.2.47",
     "@types/react-dom": "^18.2.18",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
@@ -46,6 +45,8 @@
   "devDependencies": {
     "@arco-plugins/webpack-react": "^1.4.9",
     "@babel/plugin-proposal-private-property-in-object": "^7.21.11",
+    "@types/react": "^18.2.47",
+    "@types/react-router-dom": "^5.3.3",
     "autoprefixer": "^10.4.16",
     "cross-env": "^7.0.3",
     "customize-cra": "^1.0.0",
