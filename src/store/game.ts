@@ -1,3 +1,5 @@
-import { createStore, useStore } from "resy";
+import { useStore } from './base/useStore';
 
-export const store = createStore({ count: 0 });
+export const useStoreCount = (defaultValue?: number):[number, (data: number) => void] => {
+  return useStore<number>('storeCount', defaultValue);
+};

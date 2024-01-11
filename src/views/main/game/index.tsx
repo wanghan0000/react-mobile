@@ -1,11 +1,12 @@
 import React from 'react';
 import { useGetData } from './api';
-import { useStore } from "resy";
-import { store } from '@/store/game';
+import { useStoreCount } from '@/store/game';
+
 
 const Game = () => {
   const { data, isLoading, error, mutate } = useGetData();
-  const { count } = useStore(store);
+
+  const [count,setCount] = useStoreCount()
   return (
     <div>
       <div>Game</div>

@@ -96,6 +96,7 @@ const lessLoader = {
             modifyVars: {
                 '@base-font-size': 37.5,
                 '@use-css-vars': 1,
+                '@arco-dark-mode-selector': ':root[data-theme="dark"]',
             },
             rewriteUrls: 'local', // https://github.com/bholloway/resolve-url-loader/issues/200#issuecomment-999545339
             ...(lessLoaderOptions.lessOptions || {}),

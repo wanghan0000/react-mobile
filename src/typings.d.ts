@@ -3,7 +3,8 @@ declare module '*.json' {
     export default value;
   }
   
-  declare module NodeModule {
+  declare namespace NodeModule {
+    // eslint-disable-next-line no-var
     var id: string;
   }
   

@@ -11,7 +11,7 @@ function generateRandomString(length: number) {
 }
 
 class SWRKeyManager {
-  private key: string = '';
+  private key = '';
   public static instance: SWRKeyManager;
 
   public get keyPrefix(): string {
