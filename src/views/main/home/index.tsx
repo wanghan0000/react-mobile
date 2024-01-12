@@ -3,6 +3,8 @@ import { Button } from '@arco-design/mobile-react';
 import { useNavigate } from 'react-router';
 import Game from '../game';
 import { useStoreCount } from '@/store/game';
+import DownLoadBar from './compoment/downLoadBar';
+import Banner from './compoment/banner';
 ////// 123
 const Home = () => {
   const navigate = useNavigate();
@@ -12,7 +14,8 @@ const Home = () => {
   const [count, setCount] = useStoreCount(1);
   return (
     <div>
-      Home
+      <DownLoadBar />
+      <Banner></Banner>
       <Button needActive onClick={handleOnclick}>
         跳转Login
       </Button>
